@@ -1,0 +1,396 @@
+# Email Sender Code Breakdown
+
+## 1. main.py
+```python
+# Entry point and CLI interface
+def main():
+    print("Starting 00x00 Advanced Email Sender...")
+    create_required_directories()
+    create_advanced_config()
+
+# Menu handling and user interaction (lines ~800-900)
+    print("\nOptions:")
+    print("1. Start campaign with random templates")
+    # ... rest of menu logic
+```
+
+## 2. config/config_loader.py
+```python
+# Configuration file management
+import os
+
+class ConfigLoader:
+    def load_config(self, config_file):
+        """Load configuration from ini file"""
+        config = {}
+        if os.path.exists(config_file):
+            with open(config_file, "r") as f:
+                for line in f:
+                    if "=" in line and not line.strip().startswith("#"):
+                        key, value = line.strip().split("=", 1)
+                        config[key.strip()] = value.strip()
+        return config
+
+def create_advanced_config():
+    """Create advanced configuration file"""
+    config_content = """# Advanced Email Sender Configuration
+    # ... (lines ~700-750)
+```
+
+## 3. config/smtp_config.py
+```python
+# SMTP server configuration
+import os
+import logging
+
+class SMTPConfig:
+    def load_smtp_servers(self, smtp_file):
+        """Load SMTP servers from file"""
+        smtp_servers = []
+        if os.path.exists(smtp_file):
+            with open(smtp_file, "r") as f:
+                for line in f:
+                    if line.strip() and not line.strip().startswith("#"):
+                        parts = line.strip().split("|")
+                        if len(parts) >= 4:
+                            smtp_servers.append({
+                                "server": parts[0],
+                                "port": int(parts[1]),
+                                "username": parts[2],
+                                "password": parts[3]
+                            })
+        # ... rest of method (lines ~210-235)
+```
+
+## 4. core/email_composer.py
+```python
+# Email creation and MIME handling
+import smtplib
+import time
+import random
+import os
+import base64
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
+from email.mime.image import MIMEImage
+from email.utils import formatdate, make_msgid
+import re
+
+class EmailComposer:
+    def create_email(self, to_email, template_content, attachments=None):
+        """Create email with all components"""
+        msg = MIMEMultipart('related')
+        msg['Message-ID'] = make_msgid(domain="sender.local")
+        # ... (lines ~435-500)
+```
+
+## 5. core/template_engine.py
+```python
+# Template processing and rendering
+import os
+import glob
+import random
+import logging
+
+class TemplateEngine:
+    def load_template_from_folder(self, templates_dir, template_name=None):
+        """Load a template from templates directory"""
+        if not os.path.exists(templates_dir) or not os.path.isdir(templates_dir):
+            self.logger.error(f"Templates directory not found: {templates_dir}")
+            return None
+        # ... (lines ~540-575)
+```
+
+## 6. core/placeholder_processor.py
+```python
+# Placeholder replacement logic
+import base64
+import datetime
+import random
+import uuid
+from email.utils import formatdate
+
+class PlaceholderProcessor:
+    def process_placeholders(self, content, to_email):
+        dictionary_words = self.load_dictionary()
+        username = to_email.split('@')[0] if '@' in to_email else to_email
+        # ... (lines ~130-200)
+        
+    def process_advanced_patterns(self, content):
+        import re
+        countdown_pattern = r'##COUNTDOWN\[(\d+)\]##'
+        # ... (lines ~350-375)
+```
+
+## 7. utils/random_generators.py
+```python
+# Random data generation
+import random
+
+class RandomGenerators:
+    def generate_random_numbers(self, length):
+        if length == "unlimited":
+            length = random.randint(50, 100)
+        # ... (lines ~65-85)
+    
+    def generate_random_text(self, length):
+        if length == "unlimited":
+            length = random.randint(50, 100)
+        # ... (lines ~85-95)
+        
+    def generate_random_ip(self):
+        return f"{random.randint(1, 255)}.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(1, 255)}"
+        # (line ~95)
+```
+
+## 8. media/image_handler.py
+```python
+# Image loading and processing
+import os
+import base64
+import logging
+
+class ImageHandler:
+    def load_image_from_directory(self, image_dir, image_name=None):
+        if not os.path.exists(image_dir):
+            return None
+        # ... (lines ~95-130)
+```
+
+## 9. media/logo_manager.py
+```python
+# Domain logo management
+import os
+import base64
+
+class LogoManager:
+    def get_domain_logo(self, domain):
+        logos_dir = "logos"
+        if os.path.exists(logos_dir):
+            # ... (lines ~125-135)
+```
+
+## 10. media/qr_generator.py
+```python
+# QR code generation
+import qrcode
+import io
+
+class QRGenerator:
+    def generate_qr_code(self, email, size=200):
+        """Generate a QR code for the recipient's email"""
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        # ... (lines ~270-290)
+```
+
+## 11. attachments/attachment_loader.py
+```python
+# Load and process attachments
+import os
+import logging
+
+class AttachmentLoader:
+    def load_attachments(self, attachments_dir, convert_to_pdf=False):
+        """Load attachments from a directory"""
+        attachments = []
+        if os.path.exists(attachments_dir) and os.path.isdir(attachments_dir):
+            # ... (lines ~575-610)
+```
+
+## 12. attachments/pdf_converter.py
+```python
+# PDF conversion functionality
+import os
+import logging
+
+# PDF conversion libraries
+try:
+    import pdfkit
+    from reportlab.pdfgen import canvas
+    from reportlab.lib.pagesizes import letter
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image as ReportLabImage
+    from reportlab.lib.styles import getSampleStyleSheet
+    from reportlab.lib.units import inch
+    import mammoth
+    PDF_SUPPORT = True
+except ImportError:
+    PDF_SUPPORT = False
+
+class PDFConverter:
+    def convert_file_to_pdf(self, file_path):
+        """Convert various file types to PDF"""
+        if not PDF_SUPPORT:
+            self.logger.warning("PDF conversion libraries not installed, skipping conversion")
+            return None
+        # ... (lines ~300-375)
+```
+
+## 13. security/encryption.py
+```python
+# Fernet encryption handling
+from cryptography.fernet import Fernet
+
+class EncryptionHandler:
+    def __init__(self):
+        self.encryption_key = Fernet.generate_key()
+        self.cipher_suite = Fernet(self.encryption_key)
+    
+    def encrypt_attachment(self, file_data):
+        """Encrypt attachment data using Fernet encryption"""
+        return self.cipher_suite.encrypt(file_data)
+        # (lines ~265-270)
+```
+
+## 14. tracking/pixel_tracker.py
+```python
+# Tracking pixel generation
+import base64
+
+class PixelTracker:
+    def generate_tracking_pixel(self, email):
+        """Generate tracking pixel for email opens"""
+        tracking_url = self.config.get("tracking_url", "https://example.com/track")
+        email_hash = base64.b64encode(email.encode()).decode().replace('=', '')
+        return f'<img src="{tracking_url}/open?id={email_hash}" width="1" height="1" style="display:none;" />'
+        # (lines ~295-300)
+```
+
+## 15. utils/text_processors.py
+```python
+# Text manipulation utilities
+class TextProcessors:
+    def load_dictionary(self, dict_file="dictionary.txt"):
+        words = []
+        if os.path.exists(dict_file):
+            with open(dict_file, "r") as f:
+                words = [line.strip() for line in f if line.strip()]
+        # ... (lines ~40-65)
+```
+
+## 16. tracking/analytics_handler.py
+```python
+# Analytics and statistics
+import random
+
+class AnalyticsHandler:
+    def generate_fake_statistics(self):
+        """Generate realistic fake statistics for engagement"""
+        stats = {
+            'users_joined_today': random.randint(50, 500),
+            'active_users': random.randint(1000, 10000),
+            'success_rate': random.randint(85, 99),
+            'satisfaction_score': round(random.uniform(4.5, 5.0), 1)
+        }
+        return stats
+        # (lines ~335-350)
+```
+
+## 17. networking/smtp_manager.py
+```python
+# SMTP connection management
+import smtplib
+import logging
+
+class SMTPManager:
+    def get_next_smtp(self):
+        """Get the next SMTP server in rotation"""
+        if not self.smtp_servers:
+            self.logger.error("No SMTP servers available")
+            return None
+        # ... (lines ~235-245)
+```
+
+## 18. networking/smtp_health_checker.py
+```python
+# SMTP server health monitoring
+import smtplib
+
+class SMTPHealthChecker:
+    def check_smtp_health(self, smtp_info):
+        """Check if SMTP server is healthy"""
+        try:
+            with smtplib.SMTP(smtp_info["server"], smtp_info["port"], timeout=10) as server:
+                server.ehlo()
+                server.starttls()
+                server.ehlo()
+                server.login(smtp_info["username"], smtp_info["password"])
+                return True
+        except Exception as e:
+            self.logger.warning(f"SMTP health check failed for {smtp_info['server']}: {e}")
+            return False
+        # (lines ~380-395)
+    
+    def get_healthy_smtp(self):
+        """Get a healthy SMTP server"""
+        max_attempts = len(self.smtp_servers)
+        attempts = 0
+        # ... (lines ~395-410)
+```
+
+## 19. core/email_sender.py
+```python
+# Core sending functionality
+import smtplib
+import logging
+
+class EmailSender:
+    def send_email(self, to_email, template_content, attachments=None):
+        """Send an email to the recipient"""
+        if not self.smtp_servers:
+            print(f"\033[91m[!] No SMTP servers available\033[0m")
+            self.logger.error("No SMTP servers available")
+            return False
+        # ... (lines ~510-540)
+```
+
+## 20. campaign/campaign_manager.py
+```python
+# Main campaign orchestration
+import time
+import random
+import logging
+import glob
+
+class CampaignManager:
+    def run_campaign(self, email_list_file, templates_dir="templates", attachments_dir="attachments",
+                    use_random_template=True, specific_template=None):
+        """Run the email campaign using the list of emails and templates"""
+        print(f"\n{self.version}")
+        print("=" * 60)
+        self.logger.info(f"Starting campaign with {self.version}")
+        # ... (lines ~610-700)
+```
+
+## 21. storage/directory_creator.py
+```python
+# Directory structure creation
+import os
+
+def create_required_directories():
+    """Create required directories for the enhanced functionality"""
+    directories = ["images", "logos", "templates", "attachments"]
+    
+    for directory in directories:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+            print(f"[*] Created {directory} directory")
+    # ... (lines ~720-780)
+```
+
+## Key Integration Points:
+
+1. **Main EmailSender class** should be split across multiple files but maintain the same interface
+2. **Import statements** need to be updated in each file to reference the new module structure
+3. **Shared configuration** should be passed between modules
+4. **Logger instances** should be consistent across all modules
+5. **Class inheritance** or composition patterns should be used to maintain functionality
+
+## Files that need __init__.py with imports:
+- Each package directory needs proper imports to maintain the original interface
+- Main EmailSender class should aggregate functionality from all modules

@@ -1,0 +1,125 @@
+╔═══════════════════════════════════════════════════════════════════════════════════════╗
+║                              00x00 ADVANCED EMAIL SENDER                             ║
+║                                [Русский Убийца V9.0.1] Beta                         ║
+╚═══════════════════════════════════════════════════════════════════════════════════════╝
+
+Author: TG: @gparavedicovski
+Purchase ROT: @org_SoftwareBot
+
+USER HWID: B93E5436-B6A0-4D02-A43F-783B9098F12
+=============Happy Mailing!=============
+
+
+Starting 00x00 Advanced Email Sender...
+[*] Created advanced config.ini file
+[*] Created sample smtp.txt file. Please update with your SMTP servers.
+[*] Created templates directory: templates
+[*] Created attachments directory for email attachments
+
+[*] Ready to send emails. Please ensure you have:
+    1. Updated smtp.txt with your SMTP server details
+    2. Added recipient emails to email.txt
+    3. Customized your templates in the 'templates' folder
+    4. Added any attachments to the 'attachments' folder
+
+Successfully loaded 1 SMTP        (✓)
+Successfully verified 1 SMTP      (✓)
+Verifying loaded SMTP Servers. Please Wait ⌛
+Now Authenticating smtp.vodafonemail.co.uk:465
+smtp.vodafonemail.co.uk:465 SMTP Authenticated Successfully
+Successfully verified 1 SMTP: (✓)
+
+STARTING EMAIL CAMPAIGN ✓ ✓ ✓ ✓ ✓
+SMTP SERVERS: 1 | MULTIPLE SMTP: Disabled | PROXY: Disabled
+Batch Settings: 1 emails per batch with 5.0 seconds delay between batches
+
+
+╔══════════════════════════════════════════════════════════════════════════════════════════╗
+║                                 Email Sending Details                                    ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║ Process                              Details                                             ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║ From Name    | AUTOMATED <             @arcor.de>                                        ║
+║ From Encoding| "Quoted-Printable"                                                       ║
+║ To           | code@softwarebot.cl                                                      ║
+║ Subject      | shanks@gyframe.ca                                                        ║
+║ Subj Encoding| "quoted-printable"                                                       ║
+║ Reply-To     | do-not-reply@automated.com                                               ║
+║ Status       | ✓ Email Sent Successfully                                                ║
+║ Timestamp    | 2025-05-20 00:01:37                                                      ║
+╚══════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+Failed to send email: (554, b'5.7.1 (1aaaaa) virus found: "sansecurity.malware.21691.ANDROID.OGF:EMAIL+")
+
+
+╔══════════════════════════════════════════════════════════════════════════════════════════╗
+║                                 Email Sending Details                                    ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║ Process                              Details                                             ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║ From Name    | AUTOMATED <             @arcor.de>                                        ║
+║ From Encoding| "Quoted-Printable"                                                       ║
+║ To           | employeerelations@jbhperu.com                                           ║
+║ Subject      | shanks81: Workplace External Assessment | Tuesday, March 18, 2025.|    ║
+║ Subj Encoding| "Quoted-Printable"                                                       ║
+║ Reply-To     | do-not-reply@automated.com                                               ║
+║ Status       | ✓ Email Sent Successfully                                                ║
+║ Timestamp    | 2025-05-20 00:01:37                                                      ║
+╚══════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+Failed to send email: (ssl, b'5.7.1 (1aaaaa) virus found: "sansecurity.malware.21691.ANDROID.OGF:EMAIL+"))
+
+Campaign Completed.
+Total sent: 1
+
+Options:
+1. Start campaign with random templates
+2. Start campaign with specific template
+3. Convert attachments to PDF
+4. Exit
+
+Select an option (1-4): 
+
+
+
+    Random Templates
+    Specific Template
+    PDF Conversion
+    Exit
+
+    
+
+Starting campaign with random templates...
+Loading templates from templates directory...
+
+╔══════════════════════════════════════════════════════════════════════════════════════════╗
+║                                 Email Sending Details                                    ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║ Process                              Details                                             ║
+╠══════════════════════════════════════════════════════════════════════════════════════════╣
+║ From Name    | Marketing Team                                       ║
+║ From Encoding| "Quoted-Printable"                                                       ║
+║ To           | recipient1@example.com                                                   ║
+║ Subject      | Important Update                                                         ║
+║ Subj Encoding| "quoted-printable"                                                       ║
+║ Reply-To     | noreply@example.com                                                      ║
+║ Status       | ✓ Email Sent Successfully                                                ║
+║ Timestamp    | 2025-05-31 04:35:42                                                      ║
+╚══════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+Campaign Completed.
+Total sent: 2
+                
+
+Available templates:
+1. sample_template.html
+2. svg_template.html
+Select a template (1-2): 
+
+Available templates:
+1. sample_template.html
+2. svg_template.html
+Select a template (1-2): 

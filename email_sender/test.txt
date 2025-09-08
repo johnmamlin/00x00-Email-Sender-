@@ -1,0 +1,2 @@
+Test content
+smtp.gmail.com|587|mamlinjoe999@gmail.com|ruqqhswwrjlzkvzk

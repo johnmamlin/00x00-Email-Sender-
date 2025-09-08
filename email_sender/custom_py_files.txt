@@ -1,0 +1,85 @@
+
+Directory: .
+  [PY FILE] main.py
+
+Directory: ./campaign
+  [PY FILE] schedule_manager.py
+  [PY FILE] __init__.py
+  [PY FILE] analyticsmonitoring.py
+  [PY FILE] reporting.py
+  [PY FILE] engagement.py
+  [PY FILE] batch_processor.py
+  [PY FILE] robustauthentication.py
+  [PY FILE] automatedlisthygiene.py
+  [PY FILE] campaign_manager.py
+  [PY FILE] contentbestpractices.py
+
+Directory: ./media
+  [PY FILE] __init__.py
+  [PY FILE] svg_processor.py
+  [PY FILE] logo_manager.py
+  [PY FILE] image_handler.py
+  [PY FILE] qr_generator.py
+
+Directory: ./networking
+  [PY FILE] __init__.py
+  [PY FILE] smtp_manager.py
+  [PY FILE] connection_pool.py
+  [PY FILE] smtp_health_checker.py
+  [PY FILE] network_utils.py
+
+Directory: ./storage
+  [PY FILE] __init__.py
+  [PY FILE] dictionary_manager.py
+  [PY FILE] directory_creator.py
+  [PY FILE] backup_handler.py
+  [PY FILE] file_manager.py
+
+Directory: ./utils
+  [PY FILE] encoding_utils.py
+  [PY FILE] __init__.py
+  [PY FILE] random_generators.py
+  [PY FILE] validation.py
+  [PY FILE] datetime_utils.py
+  [PY FILE] text_processors.py
+
+Directory: ./config
+  [PY FILE] __init__.py
+  [PY FILE] smtp_config.py
+  [PY FILE] settings.py
+  [PY FILE] config_loader.py
+
+Directory: ./tracking
+  [PY FILE] __init__.py
+  [PY FILE] analytics_handler.py
+  [PY FILE] link_generator.py
+  [PY FILE] campaign_stats.py
+  [PY FILE] pixel_tracker.py
+
+Directory: ./attachments
+  [PY FILE] __init__.py
+  [PY FILE] encryption_handler.py
+  [PY FILE] pdf_converter.py
+  [PY FILE] attachment_loader.py
+  [PY FILE] file_processor.py
+
+Directory: ./core
+  [PY FILE] __init__.py
+  [PY FILE] template_engine.py
+  [PY FILE] email_sender.py
+  [PY FILE] email_composer.py
+  [PY FILE] placeholder_processor.py
+
+Directory: ./security
+  [PY FILE] encryption.py
+  [PY FILE] __init__.py
+  [PY FILE] troubleshoot.py
+  [PY FILE] security_utils.py
+  [PY FILE] header_randomizer.py
+  [PY FILE] anti_spam.py
+
+Directory: ./external
+  [PY FILE] __init__.py
+  [PY FILE] geoip_handler.py
+  [PY FILE] pdf_libs.py
+  [PY FILE] third_party_apis.py

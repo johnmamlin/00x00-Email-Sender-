@@ -1,0 +1,49 @@
+<!-- EMAIL TEMPLATE WITH DYNAMIC PLACEHOLDERS -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="tenant-id" content="##TENANT-ID##">
+    <meta name="correlation-id" content="##RANDOM-ID##">
+    <meta name="diagnostic-id" content="##RANDOM-DIAG##">
+</head>
+<body style="font-family: Arial, sans-serif;">
+    <div class="header">
+        <p>Date: ##TIMESTAMP##</p>
+        <img src="##DOMAINLOGO##" alt="Domain Logo" style="max-width: 200px;">
+    </div>
+    
+    <h1>##RANDSUBJECT##</h1>
+    
+    <p>Dear ##USERNAME1##,</p>
+    
+    <p>Your verification code is: <strong>##RAN-TXT6##</strong></p>
+    
+    <p>Transaction ID: ##RAN-NUM8##<br>
+       IP Address: ##RANDOMIP##<br>
+       Date: ##DATE##<br>
+       Time: ##TIME##</p>
+    
+    <p>Please confirm your email (##EMAIL##) by scanning this QR code:<br>
+       <a href="{{Image_Clickable_URL}}">
+           <img src="##QR-CODE##" alt="QR Code" style="max-width: 150px;">
+       </a>
+    </p>
+    
+    <div class="images">
+        <img src="##PIX1##" alt="Image 1">
+        <img src="##PIX2##" alt="Image 2">
+    </div>
+    
+    <p>Security information:<br>
+       Base64 Email: ##BASE64EMAIL##<br>
+       Domain: ##DOMAIN2##<br>
+       Year: ##DATE4##</p>
+    
+    <div class="footer">
+        <p>##DOMAIN1## Security Team<br>
+           Contact ID: ##RAN-TXT8##-##RAN-NUM4##<br>
+           Reference: ##DATE1##/##USERNAME##/##RAN-NUM6##</p>
+    </div>
+</body>
+</html>

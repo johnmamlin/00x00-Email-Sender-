@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>##RANDSUBJECT## - Account Security Alert</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f5f5f5;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        /* Main container - using table for better email client support */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Logo section */
+        .logo-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-bottom: 3px solid #4a5568;
+        }
+        
+        /* Content */
+        .content {
+            padding: 30px 20px;
+        }
+        
+        /* Alert box - simplified for better compatibility */
+        .alert-box {
+            background-color: #dc3545;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #c82333;
+        }
+        
+        .alert-box h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        /* Info cards - using table layout instead of grid */
+        .info-section {
+            margin: 30px 0;
+        }
+        
+        .info-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4a5568;
+            margin-bottom: 15px;
+        }
+        
+        .info-card h3 {
+            color: #4a5568;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .info-card p {
+            color: #666666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        /* QR section */
+        .qr-section {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .qr-section h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .qr-code-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            display: inline-block;
+            margin: 20px 0;
+            border: 1px solid #dddddd;
+        }
+        
+        /* Stats section - simplified layout */
+        .stats-section {
+            background-color: #e8f4fd;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #007bff;
+        }
+        
+        .stats-row {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 5px;
+            display: inline-block;
+            min-width: 120px;
+            border: 1px solid #dddddd;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a5568;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666666;
+            margin-top: 5px;
+        }
+        
+        /* Buttons */
+        .action-section {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4a5568;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            border: 2px solid #4a5568;
+        }
+        
+        .btn:hover {
+            background-color: #2d3748;
+            border-color: #2d3748;
+        }
+        
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+        
+        /* Warning section */
+        .warning-section {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2d3436;
+            color: #b2bec3;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px;
+            background-color: #636e72;
+            border-radius: 50%;
+            color: #ffffff;
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+        }
+        
+        /* Divider */
+        .divider {
+            height: 2px;
+            background-color: #4a5568;
+            margin: 30px 0;
+        }
+        
+        /* Highlight */
+        .highlight {
+            background-color: #ffc107;
+            color: #212529;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        /* Responsive design */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 0;
+                border: none;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .stat-item {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        
+        /* Outlook specific fixes */
+        .outlook-fix {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+    </style>
+    
+    <!--[if mso]>
+    <style type="text/css">
+        .email-container {
+            width: 600px;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body>
+    ##TRACKING-PIXEL##
+    
+    <div class="email-container outlook-fix">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>🔐 Security Alert for ##USERNAME1##</h1>
+            <p class="subtitle">Account verification required for ##DOMAIN0## services</p>
+        </div>
+        
+        <!-- Logo Section -->
+        <div class="logo-section">
+            ##DOMAINLOGO##
+            <p style="margin-top: 10px; color: #666;">Trusted by <span class="highlight">##ACTIVE-USERS##</span> users worldwide</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <p>Dear <strong>##USERNAME1##</strong>,</p>
+            <br>
+            <p>We detected unusual activity on your <strong>##DOMAIN2##</strong> account on <strong>##DATE##</strong> at <strong>##TIME##</strong>. For your security, immediate verification is required.</p>
+            
+            <!-- Alert Box -->
+            <div class="alert-box">
+                <h2>⚠️ Immediate Action Required</h2>
+                <p>Your account access will be limited in <strong>##URGENCY-TIMER##</strong></p>
+                <p>Session ID: <code>##TENANT-ID##</code></p>
+            </div>
+            
+            <!-- Information Section -->
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>📍 Login Location</h3>
+                    <p><strong>##LOCATION##</strong></p>
+                    <p>IP: ##RANDOMIP##</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>💻 Device Information</h3>
+                    <p>Browser: <strong>##BROWSER-INFO##</strong></p>
+                    <p>OS: <strong>##OS-INFO##</strong></p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>📅 Activity Timeline</h3>
+                    <p>Date: <strong>##DATE1##</strong></p>
+                    <p>Time: <strong>##TIME##</strong></p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>🎯 Risk Assessment</h3>
+                    <p>Threat Level: <span style="color: #dc3545; font-weight: bold;">HIGH</span></p>
+                    <p>Diagnostic: ##RANDOM-DIAG##</p>
+                </div>
+            </div>
+            
+            <!-- Statistics Section -->
+            <div class="stats-section">
+                <h3 style="text-align: center; margin-bottom: 20px; color: #2d3436;">📊 Security Dashboard</h3>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">##USERS-TODAY##</span>
+                        <div class="stat-label">New Users Today</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">##SUCCESS-RATE##</span>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">##SATISFACTION##</span>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">##FAKE-VIEWS##</span>
+                        <div class="stat-label">Total Views</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- QR Code Section -->
+            <div class="qr-section">
+                <h2>📱 Quick Verification</h2>
+                <p>Scan the QR code below with your mobile device for instant verification</p>
+                <div class="qr-code-container">
+                    ##QR-Code##
+                </div>
+                <p><small>Or use verification code: <strong>##RAN-NUM[8]##</strong></small></p>
+            </div>
+            
+            <!-- Image Section -->
+            <div style="text-align: center; margin: 30px 0;">
+                ##PIX##
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div style="margin: 30px 0;">
+                ##COUNTDOWN[24]##
+            </div>
+            
+            <!-- Warning Section -->
+            <div class="warning-section">
+                <h3>🚨 Important Security Notice</h3>
+                <p>Failure to verify within the specified timeframe may result in temporary account suspension. Reference: <strong>##RAN-TXT[12]##</strong></p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- Action Buttons -->
+            <div class="action-section">
+                <h3>Choose Your Action:</h3>
+                <a href="##VERIFY-LINK##" class="btn">🔓 Verify Account Now</a>
+                <a href="##LOGIN-LINK##" class="btn btn-danger">🔐 Secure Login</a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- Additional Information -->
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #e9ecef;">
+                <h3 style="color: #2d3436; margin-bottom: 15px;">📋 Account Summary</h3>
+                <p style="margin: 10px 0;"><strong>Account:</strong> ##BASE64EMAIL##</p>
+                <p style="margin: 10px 0;"><strong>Domain:</strong> ##DOMAIN1##</p>
+                <p style="margin: 10px 0;"><strong>Last Activity:</strong> ##DATE2##, ##DATE3##</p>
+                <p style="margin: 10px 0;"><strong>Downloads:</strong> ##FAKE-DOWNLOADS##</p>
+                <p style="margin: 10px 0;"><strong>Promo Code:</strong> ##COUPON-CODE##</p>
+            </div>
+            
+            <!-- Offer Section -->
+            <div style="background-color: #d4edda; padding: 20px; border-radius: 8px; margin: 20px 0; color: #155724; border: 1px solid #c3e6cb;">
+                <h3>🎁 Exclusive Offer</h3>
+                <p>As a valued member of our ##DOMAIN0## community, you're eligible for special benefits!</p>
+                <p>Random Code: <strong>##RAN-NUM[16]##</strong></p>
+                <p>Access Token: <strong>##RAN-TXT[20]##</strong></p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <h4>##RANDFROMNAME## Security Team</h4>
+            <p>Email sent on ##TIMESTAMP##</p>
+            
+            <div class="social-links">
+                <a href="#">📧</a>
+                <a href="#">📱</a>
+                <a href="#">🌐</a>
+                <a href="#">📞</a>
+            </div>
+            
+            <p>
+                <a href="##UNSUBSCRIBE-LINK##">Unsubscribe</a> | 
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Contact Support</a>
+            </p>
+            
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #636e72;">
+                <p style="font-size: 12px; opacity: 0.7;">
+                    This email was sent to ##EMAIL## from ##DOMAIN2##<br>
+                    If this wasn't you, please ignore this email or contact our support team.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

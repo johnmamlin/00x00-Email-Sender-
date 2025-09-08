@@ -1,0 +1,5 @@
+cryptography>=3.0.0
+colorama>=0.4.4
+dnspython>=2.1.0
+email-validator>=1.1.0
+smtplib-python>=1.0.0

